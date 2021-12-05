@@ -1,12 +1,20 @@
 # Import all Flask components
-from flask import Flask, render_template, request, redirect, url_for, flash, jsonify
+from flask import Flask, render_template, request, redirect, url_for, flash, jsonify, Markup
 
 # initialize the Flask application
 app = Flask(__name__)
 
+labels = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC']
+
+values = [96.5, 98.5, 99.5, 100.5, 101.5, 102.5, 103.5, 104.5, 105.5, 106.5, 107.5, 108.5]
+
+colors = ['#007bff', '#28a745', '#333333', '#c3e6cb', '#dc3545', '#6c757d', '#6f42c1', '#007bff', '#28a745', '#333333', '#c3e6cb', '#dc3545']
+
 @app.route('/')
 def home():
-    return render_template('index.html', title='DASHBOARD')
+    line_labels = labels
+    line_values = values
+    return render_template('home.html', title='DASHBOARD', max=120, labels=line_labels, values=line_values, set=zip(line_labels, line_values, colors))
 
 @app.route('/locations')
 def about():
@@ -23,6 +31,10 @@ def compare():
 @app.route('/settings')
 def settings():
     return render_template('settings.html', title='SETTINGS')
+
+
+
+# Testing Chart
 
 
 
