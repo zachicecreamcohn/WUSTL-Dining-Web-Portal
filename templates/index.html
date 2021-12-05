@@ -4,21 +4,35 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="static/css/style.css">
+
+    <!-- import Courier Prime -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <script src="static/js/main.js"></script>
+
 </head>
 <body>
-    <div class="logo">
-        <img src="static/img/logo.png" alt="Logo">
-    </div>
+    <header class="topstrip">
+        <div class="logo-container">
+            <h1 id="diningdata">Dining<i>Data</i></h1>
+            <img id="wustl-logo" src="static/img/onelinelogo.png" alt="Washington University logo">
+        </div>
+    </header>
+<div class="bottom">
 <div id="main">
     <ul class="navigation">
-        <li><a class="tab1" href="#">Home</a></li>
-        <li><a class="tab2" href="#">About</a></li>
-        <li><a class="tab3 href="#">Contact</a></li>
+        <li><a class="tab1" href="/">Home</a></li>
+        <li><a class="tab2" href="/about">About</a></li>
+        <li><a class="tab3" href="/contact">Contact</a></li>
     </ul>
     
     <div class="tabContent">
-        <span>TEST</span>
+        {% block content %}
+        {% endblock %}
     </div>
+</div>
 </div>
 </body>
 </html>

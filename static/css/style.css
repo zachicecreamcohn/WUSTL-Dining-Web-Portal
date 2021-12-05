@@ -24,6 +24,7 @@
     margin-left: 3px;
     margin-right: 3px;
     color: white;
+    font-weight: 500;
 
     border-top-left-radius: .5em;
     border-top-right-radius: .5em;
@@ -60,18 +61,39 @@
 
 #main {
     margin: .75em;
-    margin-top: 10vh;
+    margin-top: 3vh;
 }
 
 .tabContent {
     background-color: #f7f7f7;
     height: 100%;
     padding: 1em;
-    height: 90vh;
+    height: auto;
+
     border-top-left-radius: .5em;
     border-bottom-left-radius: .5em;
     border-bottom-right-radius: .5em;
   }
 
 
-  
+.logo-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    /* margin-top: 1em; */
+    margin-bottom: 1em;
+    margin-left: 1em;
+}
+
+#diningdata {
+    font-family: 'Courier Prime', monospace;
+    font-weight: 600;
+    font-size: 2.5em;
+}
+
+#wustl-logo {
+    height: 4vh;
+}
+
+
