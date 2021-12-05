@@ -60,8 +60,14 @@
   }
 
 #main {
-    margin: .75em;
+    /* margin: .75em; */
     margin-top: 3vh;
+    max-width: 80em;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
 }
 
 .tabContent {
@@ -73,7 +79,11 @@
     border-top-left-radius: .5em;
     border-bottom-left-radius: .5em;
     border-bottom-right-radius: .5em;
-  }
+
+
+    
+}
+
 
 
 .logo-container {
@@ -89,11 +99,16 @@
 #diningdata {
     font-family: 'Courier Prime', monospace;
     font-weight: 600;
-    font-size: 2.5em;
+    font-size: 2.7em;
+    text-decoration: none;
+    color: rgb(96, 120, 255);
 }
 
 #wustl-logo {
     height: 4vh;
 }
 
+.no-link-decoration {
+    text-decoration: none;
+}
 
