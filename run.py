@@ -6,15 +6,23 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return render_template('index.html')
+    return render_template('index.html', title='DASHBOARD')
 
-@app.route('/about')
+@app.route('/locations')
 def about():
-    return render_template('about.html')
+    return render_template('locations.html', title='LOCATIONS')
 
-@app.route('/contact')
-def contact():
-    return render_template('contact.html')
+@app.route('/productsales')
+def customercategories():
+    return render_template('productsales.html', title='SALES')
+
+@app.route('/customcompare')
+def compare():
+    return render_template('customcompare.html', title='CUSTOM COMPARE')
+
+@app.route('/settings')
+def settings():
+    return render_template('settings.html', title='SETTINGS')
 
 
 
