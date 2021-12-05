@@ -74,22 +74,26 @@
 
 }
 
+.purplebar {
+    background-color: rgb(96, 120, 255);
+    height: .5em;
+    width: 100%;
+}
+
 .tabContent {
     background-color: #f7f7f7;
     height: 100%;
     padding: 1em;
     height: auto;
 
-    border-top-left-radius: .5em;
+
     border-bottom-left-radius: .5em;
     border-bottom-right-radius: .5em;
-
-
     
 }
 
 .settingstab {
-    padding-bottom: .22em !important;
+    padding-bottom: .24em !important;
     padding-top: .3em !important;
     padding-left: .35em !important;
     padding-right: .35em !important;
@@ -155,11 +159,18 @@
 .dashboard-container {
     display: flex;
     flex-flow: row wrap;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: flex-start;
-    flex-grow: 3;
+    justify-content: flex-start
+    ;
+    align-items: center;
     margin-top: 1em;
     margin-bottom: 1em;
     margin-left: 1em;
+    margin-right: 1em;
 }
+
+.row {
+    margin:0 -15px !important;
+  }
+  .col-xx-xx {
+    padding:0 15px !important;
+  }
