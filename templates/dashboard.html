@@ -1,18 +1,18 @@
 {% extends "index.html" %}
 
   {% block menu%}
-    <table id="menu-table">
+    <table class="bold" id="menu-table">
       <tr>
-          <td><a href="#">Menu Item 1</a></td>
+          <td class="menu-option"><a href="#">Menu Item 1</a></td>
       </tr>
       <tr>
-          <td><a href="#">Menu Item 2</a></td>
+          <td class="menu-option"><a href="#">Menu Item 2</a></td>
       </tr>
       <tr>
-          <td><a href="#">Menu Item 3</a></td>
+          <td class="menu-option"><a href="#">Menu Item 3</a></td>
       </tr>
       <tr>
-          <td><a href="#">Menu Item 4</a></td>
+          <td class="menu-option"><a href="#">Menu Item 4</a></td>
       </tr>
     </table>
   {% endblock %}    
@@ -22,13 +22,13 @@
     <div class="dashboard-container">
 
       <div class="dash-module">
-        <h1>$6,502.87</h1>
+        <h1 class="number">$6,502.87</h1>
         <p id="revenue-date"></p>
         <input type="date" value={{today}} id="revenue-date-selector">
       </div>
 
       <div class="dash-module">
-        <h1 style="color: rgb(0, 192, 0);">$1,743.28</h1>
+        <h1 class="number" style="color: rgb(0, 192, 0);">$1,743.28</h1>
         <p id="profit-date"></p>
         <input type="date" value={{today}} id="profit-date-selector">
       </div>

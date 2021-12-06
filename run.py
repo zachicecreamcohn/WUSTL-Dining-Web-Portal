@@ -24,6 +24,11 @@ def home():
 def about():
     return render_template('locations.html', title='LOCATIONS')
 
+# subroutes for each location
+@app.route('/locations-<location>')
+def location(location):
+    return render_template(f'{location}.html', title=location.upper(), location=location)
+
 @app.route('/productsales')
 def customercategories():
     return render_template('productsales.html', title='SALES')

@@ -74,6 +74,7 @@
 
 }
 
+
 .purplebar {
     background-color: rgb(96, 120, 255);
     height: .5em;
@@ -129,12 +130,24 @@
 #diningdata {
     font-family: 'Courier Prime', monospace;
     font-weight: 600;
-    font-size: 2.7em;
+    font-size: 45px;
     text-decoration: none;
     color: rgb(96, 120, 255);
     margin-bottom: 0px !important;
 
 }
+
+#diningdata2 {
+    font-family: 'Courier Prime', monospace;
+    font-weight: 600;
+    font-size: 45px;
+    text-decoration: none;
+    color: rgb(96, 120, 255);
+    margin-bottom: 0px !important;
+
+}
+
+
 
 #subtitle {
     font-family: 'Courier Prime', monospace;
@@ -143,10 +156,10 @@
     text-decoration: none;
     color: rgb(0, 0, 0);
     margin-top: 0px !important;
-
+    margin-left: .09em;
 }
 #wustl-logo {
-    height: 4vh;
+    height: 4.75vh;
 }
 
 .no-link-decoration {
@@ -231,19 +244,48 @@
 #menu-table td {
     padding-bottom: .25em;
     padding-top: .25em;
+    background-color: rgb(96, 120, 255);
+    border-radius: .25em;
+    opacity: .55;
+    color: white;
+}
+
+.selected-menu-option {
+    opacity: 1  !important;
+
 }
 
 #menu-table th {
     text-align: left;
+    
 }
 
 #menu-table a {
     color: white;
+    
     text-decoration: none;
 }
 
 
 #menu-table a:hover {
-    font-weight: bold;
+    font-weight: bolder;
 
 }
+
+.number {
+    font-family: 'Readex Pro', sans-serif;
+}
+
+
+* {
+    font-family: 'Roboto';
+}
+
+.bold {
+    font-weight: bold;
+}
+
+/* .Nunito {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: bold;
+} */

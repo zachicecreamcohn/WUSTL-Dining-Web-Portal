@@ -1,58 +1,63 @@
 {% extends "index.html" %}
 
 {% block menu%}
-<table id="menu-table">
+<table class="bold" id="menu-table">
   <tr>
-      <td><a href="#">Bear's Den</a></td>
+      <td class="menu-option"><a href="/locations-bearsden">Bear's Den</a></td>
   </tr>
   <tr>
-      <td><a href="#">Bytes Café</a></td>
+      <td class="menu-option"><a href="/locations-bytescafe">Bytes Café</a></td>
   </tr>
   <tr>
-      <td><a href="#">Café Bergson</a></td>
+      <td class="menu-option"><a href="/locations-cafebergson">Café Bergson</a></td>
   </tr>
   <tr>
-      <td><a href="#">Café Rosedale</a></td>
+      <td class="menu-option"><a href="locations-caferosedale">Café Rosedale</a></td>
   </tr>
     <tr>
-        <td><a href="#">Cherry Tree</a></td>
+        <td class="menu-option"><a href="locations-cherrytree">Cherry Tree</a></td>
     </tr>
     <tr>
-        <td><a href="#">DUC Dining</a></td>
+        <td class="menu-option"><a href="locations-ducdining">DUC Dining</a></td>
     </tr>
       <tr>
-          <td><a href="#">Etta's Micro-Mart</a></td>
+          <td class="menu-option"><a href="/locations-ettasmicromart">Etta's Micro-Mart</a></td>
       </tr>
       <tr>
-        <td><a href="#">Ibby's</a></td>
+        <td class="menu-option"><a href="/locations-ibbys">Ibby's</a></td>
     </tr>
       <tr>
-          <td><a href="#">Law Café</a></td>
+          <td class="menu-option"><a href="locations-lawcafe">Law Café</a></td>
       </tr>
       <tr>
-        <td><a href="#">Millbrook Market</a></td>
+        <td class="menu-option"><a href="locations-millbrookmarket">Millbrook Market</a></td>
     </tr>
       <tr>
-          <td><a href="#">Parkside Café</a></td>
+          <td class="menu-option"><a href="/locations-parksidecafe">Parkside Café</a></td>
       </tr>
       <tr>
-        <td><a href="#">Paws & Go</a></td>
+        <td class="menu-option"><a href="/locations-pawsandgo">Paws & Go</a></td>
     </tr>
       <tr>
-          <td><a href="#">Sally The Salad Robot</a></td>
+          <td class="menu-option"><a href="/locations-sallythesaladrobot">Sally The Salad Robot</a></td>
       </tr>
       <tr>
-        <td><a href="#">Stanley's Sushi & Tea</a></td>
+        <td class="menu-option"><a href="/locations-stanleyssushi">Stanley's Sushi & Tea</a></td>
     </tr>
       <tr>
-          <td><a href="#">Village Café</a></td>
+          <td class="menu-option"><a href="/locations-villagecafe">Village Café</a></td>
       </tr>
       <tr>
-        <td><a href="#">Whispers Café</a></td>
+        <td class="menu-option"><a href="/locations-whisperscafe">Whispers Café</a></td>
     </tr>
 </table>
 {% endblock %}        
 
 {% block content %}
 <p>this page lets a user look at data for specific locations</p>
+
+{% block location_content %}
+{% endblock %}
+
+
 {% endblock %}
