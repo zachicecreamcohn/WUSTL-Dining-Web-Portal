@@ -41,4 +41,30 @@ window.onload = function() {
         tab5.style.backgroundColor = 'rgb(96, 120, 255)';
     }
 
+
+    var profit_date = document.getElementById('profit-date');
+    var selected_date = document.getElementById('profit-date-selector')
+    //set profit_date to selected_date
+
+    profit_date.innerText = "Profit for " + selected_date.value;
+    
+    selected_date.addEventListener('change', (event) => {
+        const selected_date = document.getElementById('profit-date-selector').value;
+        profit_date.innerText = "Profit for " + selected_date;
+      });
+
+
+
+
+    var revenue_date = document.getElementById('revenue-date');
+    var selected_date1 = document.getElementById('revenue-date-selector')
+    //set profit_date to selected_date
+
+    revenue_date.innerText = "Revenue for " + selected_date1.value;
+    
+    selected_date1.addEventListener('change', (event) => {
+        const selected_date1 = document.getElementById('revenue-date-selector').value;
+        revenue_date.innerText = "revenue for " + selected_date1;
+    });
+  
 }

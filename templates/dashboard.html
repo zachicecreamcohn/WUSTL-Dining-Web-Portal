@@ -6,13 +6,18 @@
 
       <div class="dash-module">
         <h1>$6,502.87</h1>
-        <p>Revenue for 12/5/2021</p>
+        <p id="revenue-date"></p>
+        <input type="date" value={{today}} id="revenue-date-selector">
       </div>
 
       <div class="dash-module">
         <h1 style="color: rgb(0, 192, 0);">$1,743.28</h1>
-        <p>Profit for 12/5/2021</p>
-        </div>
+        <p id="profit-date"></p>
+        <input type="date" value={{today}} id="profit-date-selector">
+      </div>
+
+
+
     <div id="bar1">
         <canvas id="chart1"class="graph-module"></canvas>
         <script>

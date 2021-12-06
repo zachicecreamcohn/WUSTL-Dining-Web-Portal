@@ -1,6 +1,6 @@
 # Import all Flask components
 from flask import Flask, render_template, request, redirect, url_for, flash, jsonify, Markup
-
+import datetime
 # initialize the Flask application
 app = Flask(__name__)
 
@@ -12,9 +12,13 @@ colors = ['#007bff', '#28a745', '#333333', '#c3e6cb', '#dc3545', '#6c757d', '#6f
 
 @app.route('/')
 def home():
+    # today's date in YYYY-MM-DD format
+    now = datetime.datetime.now()
+    today = now.strftime("%Y-%m-%d")
+
     line_labels = labels
     line_values = values
-    return render_template('home.html', title='DASHBOARD', max=120, labels=line_labels, values=line_values, set=zip(line_labels, line_values, colors))
+    return render_template('dashboard.html', title='DASHBOARD', max=120, labels=line_labels, values=line_values, set=zip(line_labels, line_values, colors), today=today)
 
 @app.route('/locations')
 def about():
