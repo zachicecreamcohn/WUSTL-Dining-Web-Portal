@@ -38,10 +38,31 @@
         <li class="no-right-margin"><a class="tab5 settingstab" href="/settings"><img id="settingsicon" class="settingstab" src="static/img/settings.svg" alt="settings"></a></li>
     </ul>
     <div class="purplebar"></div>
-    <div class="tabContent">
+<div class="grid-container">
+                <div id="menu-column" class="grid-child">
+                    <!-- <div id="inner-menu-column"> -->
+                        {% block menu %}
+                        {% endblock %}
+                            
+                    </div>
+                <!-- </div> -->
 
-        {% block content %}
-        {% endblock %}
+                <div class="tabContent grid-child">
+                    {% block content %}
+                    {% endblock %}
+                </div>
+
+            
+        
+
+
+            
+
+
+            
+
+
+        
     </div>
 </div>
 </div>
