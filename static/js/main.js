@@ -4,8 +4,12 @@ window.onload = function() {
     var page_url = window.location.pathname;
     // if "-" in url, then set url as all text before "-"
     if (page_url.indexOf("-") > -1) {
+        var individual_location_url = page_url;
         page_url = page_url.substring(0, page_url.indexOf("-"));
         console.log(page_url);
+
+        
+        console.log(individual_location_url);
     }
 
     var tab1 = document.getElementsByClassName('tab1')[0];
@@ -86,7 +90,7 @@ window.onload = function() {
         var cell = row.cells[0];
         var cell_url = cell.getElementsByTagName("a")[0].href;
         var suburl = "/"+cell_url.split('/')[3];
-        if (suburl == page_url) {
+        if (suburl == individual_location_url) {
             console.log("match");
             cell.classList.add("selected-menu-option");
             item_selected = true;
