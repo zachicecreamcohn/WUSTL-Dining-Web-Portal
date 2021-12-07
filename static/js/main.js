@@ -2,6 +2,12 @@ window.onload = function() {
 
 
     var page_url = window.location.pathname;
+    // if "-" in url, then set url as all text before "-"
+    if (page_url.indexOf("-") > -1) {
+        page_url = page_url.substring(0, page_url.indexOf("-"));
+        console.log(page_url);
+    }
+
     var tab1 = document.getElementsByClassName('tab1')[0];
     var tab2 = document.getElementsByClassName('tab2')[0];
     var tab3 = document.getElementsByClassName('tab3')[0];
