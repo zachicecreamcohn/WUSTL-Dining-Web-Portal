@@ -1,0 +1,35 @@
+{% extends "productsales.html" %}
+
+
+
+
+{% block content %}
+{% block menuoption_content %}
+<!-- <p>This page shows info specifically for {{menuoption}}</p> -->
+<div class="sales-container">
+<!-- search box form -->
+<form action="/productsales-search" method="post">
+    <input type="text" name="searchterm" class="searchbox" placeholder="Find Data On Specific Products">
+    <input class="search_btn" type="submit" value="Search">
+
+    {% if results %}
+    {{searchterm}}
+    <table>
+    {% for result in results %}	
+    <tr>
+        <td>{{result.name}}</td>
+        <td>{{result.price}}</td>
+        <td>{{result.cost}}</td>
+        <td>{{result.type}}</td>
+        <td>{{result.description}}</td>
+        <td>{{result.ingredients}}</td>
+        <td>{{result.number_sold_today}}</td>
+    </tr>
+
+    {% endfor %}
+    </table>
+    {% endif %}
+{% endblock %}
+</div>
+
+{% endblock %}

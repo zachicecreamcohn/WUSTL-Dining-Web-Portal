@@ -1,22 +1,24 @@
 {% extends "index.html" %}
 
+
 {% block menu%}
 <table class="bold" id="menu-table">
+    <tr>
+        <td class="menu-option"><a href="/productsales-search">Product Search</a></td>
+    </tr>
   <tr>
-      <td class="menu-option"><a href="#">Menu Item 1</a></td>
+      <td class="menu-option"><a href="/productsales-type">Products by Type</a></td>
   </tr>
   <tr>
-      <td class="menu-option"><a href="#">Menu Item 2</a></td>
+      <td class="menu-option"><a href="/productsales-ingredients">Products by Major Ingredients</a></td>
   </tr>
   <tr>
-      <td class="menu-option"><a href="#">Menu Item 3</a></td>
-  </tr>
-  <tr>
-      <td class="menu-option"><a href="#">Menu Item 4</a></td>
-  </tr>
+      <td class="menu-option"><a href="/productsales-allergens">Products by Allergens</a></td>
+</tr>
 </table>
 {% endblock %}        
 
 {% block content %}
-<p>This page lets a user look at data for specific or groups of products--item popularity, profitability, popular purchase windows, etc.</p>
+{% block menuoption_content %}
+{% endblock %}
 {% endblock %}

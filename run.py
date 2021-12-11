@@ -33,6 +33,51 @@ def location(location):
 def customercategories():
     return render_template('productsales.html', title='SALES')
 
+# some dummy data for search results
+class Product:
+    def __init__(self, name, price, cost, type, description, ingredients, number_sold_today):
+        self.name = name
+        self.price = price
+        self.cost = cost
+        self.type = type
+        self.description = description
+        self.ingredients = ingredients
+        self.number_sold_today = number_sold_today
+        
+
+## the dummy data in a list of Product objects
+products = [
+    Product('Coffee', '$1.00', '$0.50', 'Coffee', 'This is a description of the coffee', 'drink', '100'),
+    Product('Bagel', '$1.00', '$0.50', 'Bagel', 'This is a description of the bagel', 'Bread', '100'),
+    Product('Cake', '$1.00', '$0.50', 'Cake', 'This is a description of the cake', 'Dessert', '100'),
+    Product('Cookie', '$1.00', '$0.50', 'Cookie', 'This is a description of the cookie', 'Dessert', '100'),
+    Product('Cupcake', '$1.00', '$0.50', 'Cupcake', 'This is a description of the cupcake', 'Dessert', '100'),
+    Product('Orange Juice', '$1.00', '$0.50', 'Juice', 'This is a description of the juice', 'Drink', '100'),
+    Product('Apple Juice', '$1.00', '$0.50', 'Juice', 'This is a description of the juice', 'Drink', '100'),
+    Product('Water', '$1.00', '$0.50', 'Water', 'This is a description of the water', 'Drink', '100'),
+    Product('Sweet Potato Wrap', '$1.00', '$0.50', 'Wrap', 'This is a description of the wrap', 'Pre-packaged', '100'),
+    Product('Chips', '$1.00', '$0.50', 'Chips', 'This is a description of the chips', 'Pre-packaged', '100'),
+    Product('Candy', '$1.00', '$0.50', 'Candy', 'This is a description of the candy', 'Pre-packaged', '100'),
+]
+
+# subroutes for each product menu option
+@app.route('/productsales-<menuoption>', methods=['GET', 'POST'])
+def product(menuoption):
+    if menuoption == 'search':
+        if request.method == 'POST':
+            # get search term
+            searchterm = request.form['searchterm']
+            
+            # TODO: build search engine for products
+
+            # return search results
+
+            # results are in a list of Product objects. This is DUMMY DATA created above
+            results= products
+            return render_template('search.html', title='SEARCH', searchterm=searchterm, results=results)
+        
+    return render_template(f'{menuoption}.html', title=menuoption.upper(), menuoption=menuoption)
+
 @app.route('/customcompare')
 def compare():
     return render_template('customcompare.html', title='CUSTOM COMPARE')
