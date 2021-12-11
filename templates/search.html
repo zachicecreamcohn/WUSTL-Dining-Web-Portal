@@ -8,13 +8,18 @@
 <!-- <p>This page shows info specifically for {{menuoption}}</p> -->
 <div class="sales-container">
 <!-- search box form -->
-<form action="/productsales-search" method="post">
-    <input type="text" name="searchterm" class="searchbox" placeholder="Find Data On Specific Products">
-    <input class="search_btn" type="submit" value="Search">
 
     {% if results %}
-    {{searchterm}}
+    <form action="/productsales-search" method="post">
+        <input type="text" name="searchterm" class="searchbox" placeholder="{{searchterm}}">
+        <button type="submit" class="search_btn"><span class="material-icons">search</span></button>
+    </form>
+
     <table>
+    <th>
+        <p id="results_message"><i>Showing results for "{{searchterm}}"</i></p>
+    </th>
+
     {% for result in results %}	
     <tr>
         <td>{{result.name}}</td>
@@ -28,7 +33,16 @@
 
     {% endfor %}
     </table>
+    {% else %}
+    <form action="/productsales-search" method="post">
+        <input type="text" name="searchterm" class="searchbox" placeholder="Find Data On Specific Products">
+        <button type="submit" class="search_btn"><span class="material-icons">search</span></button>
+    </form>
     {% endif %}
+
+
+
+
 {% endblock %}
 </div>
 

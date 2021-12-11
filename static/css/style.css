@@ -301,6 +301,8 @@
     width: 40vw;
     padding: .5em;
     border-right: none;
+    
+    margin-bottom: 2vh;
 }
 
 .search_btn {
@@ -329,4 +331,9 @@
     margin-left: 1em;
     margin-right: 1em;
 
+}
+
+#results_message {
+    font-weight: normal;
+    
 }
