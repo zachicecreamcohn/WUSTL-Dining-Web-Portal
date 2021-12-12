@@ -15,9 +15,11 @@
         <button type="submit" class="search_btn"><span class="material-icons">search</span></button>
     </form>
 
-    <table>
+    
+
+    <table class="table table-hover table-responsive-lg">
     <th>
-        <p id="results_message"><i>Showing results for "{{searchterm}}"</i></p>
+        <p><i>Showing results for "{{searchterm}}"</i></p>
     </th>
 
     {% for result in results %}	

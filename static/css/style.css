@@ -306,6 +306,8 @@
     font-size: medium;
 
     margin-left: 0px;
+    margin-bottom: 2vh;
+    margin-top: 1vh;
 }
 
 .searchbox:focus {
@@ -322,8 +324,9 @@
     padding-left: 1vw;
     padding-right: 1vw;
     padding-top: 1vh;
-    padding-bottom: .5vh;
+    padding-bottom: 2vh;
     margin-left: 0px;
+    margin-top: 1vh;
 
 
 
@@ -351,4 +354,11 @@
     font-weight: normal;
 
 }
+
+
+
+
+
+
+
 
